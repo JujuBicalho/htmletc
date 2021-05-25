@@ -6,19 +6,26 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  background-color: aqua;
+  margin: 0;
+  height: 20vh;
+}
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2rem 0;
+  padding: 1rem 0; 
+  
 }
 
 .container__cartoes {
   margin: 0;
+  right: 40rem;
 }
 
 .bloco__redessociais {
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 }
 
 /*Animações*/
@@ -113,6 +120,10 @@
   font-size: 0.9rem;
 }
 
+.hr1 {
+  border-top: #502050 solid 18px;
+  border-radius: 20px;
+}
 .linguagens{
   font-size: 1.5rem;
   color: #ee68a4;
@@ -123,6 +134,7 @@
   background-color: #d38ad3;
   margin-bottom: 1rem;
   padding: 0rem;
+  border: #fff solid 5px;
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,19 +150,17 @@
 
 .container__redessociais a{
   text-decoration: none;
-}
-
-.container__redessociais a:hover {
-  color:#ee68a4;
+  color: #502050;
 }
 
 .container__redessociais a:visited {
   color: #fff;
 }
-
+.container__redessociais a:hover {
+  color:#ee68a4;
+}
 
 .container__redessociais .icones-texto {
-  color: #502050;
   font-weight: 400;
   font-size: 0.8rem;
   margin: 0.7em 0 0;
@@ -174,29 +184,66 @@
 .bloco_cartoes {
   background-color: #502050;
   margin: 1rem 0;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
+  border: #fff solid 5px;
   border-radius: 20px;
+  
 }
 
 .bloco_cartoes .bloco_cartoes-head {
   display: flex;
-  align-items: center;
+  align-content: center;
   border-radius: 50%;
   width: 80px;
+}
+
+.cartoes_status {
+  color: #996796;
 }
 
 .container__cartoes {  
   font-size: 1rem;
   display: flex;
-  flex-direction: column;
-  margin: 0;
+  position:relative;  
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  width: 45vw;
 }
+
 
 .bloco_cartoes-content {
   font-size: 0.79rem;
   line-height: 1.5;
+  text-align: center;
 }
+
+.foto {  
+  border: #502050 20px;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 450px;
+   
+}
+
+.footer h1 {
+  color: #502050;
+  font-size: 14px;
+  text-align: center;
+  -webkit-animation: 2.6s ease-in 0s 1 deslizarParaCima;
+  animation: 2.6s ease-in 0s 1 deslizarParaCima;
+  padding:1.2rem;
+}
+
+.footer a{
+  color: #d38ad3;
+  text-decoration: none;
+}
+
 
 /* Responsivo*/
 
@@ -205,9 +252,9 @@
   .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 50% 50%;
+    -ms-grid-columns: 80% 80%;
         grid-template-columns: 50% 50%;
-    grid-gap: 1rem 3rem;
+    grid-gap: 5rem 3rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -236,8 +283,6 @@
   
 @media (min-width: 768px) {
   .container__cartoes {
-    -ms-grid-column: span 2;
-        grid-column-start: span 2;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 32% 32% 32%;
@@ -245,10 +290,10 @@
     grid-gap: 2%;
   }
   .container__cartoes .bloco_cartoes:nth-child(2) {
-    top: 2em;
+    top: 2rem;
   }
   .container__cartoes .bloco_cartoes:nth-child(3) {
-    top: 4em;
+    top: 4rem;
   }
 }
 
@@ -296,7 +341,7 @@
     position: relative;
   }
   .bloco_cartoes .bloco_cartoes-head {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   .bloco_cartoes .bloco_cartoes-head .profile-pic img {
     width: 60px;
